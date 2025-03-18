@@ -5,18 +5,6 @@ Apostol Alexandru (E2), Benchea Diana (E2), Blendea Delia (A5), Buliga Sarah (E2
 
 # Person.java
 
-## Scurtă descriere
-Această clasă Java hestionează informațiile personale ale unui utilizator. Clasa oferă funcționalități de autentificare și actualizare a parolei, folosind hashing SHA-256 pentru securizarea parolei.
-
-### Atribute:
-- `name`: numele persoanei
-- `personalIdentificationNumber`: cod numeric personal (CNP)
-- `birthDate`: data nașterii
-- `username`: nume de utilizator
-- `mappedPassword`: parola stocată în format hash (SHA-256)
-- `phoneNumber`: număr de telefon
-- `email`: adresa de email
-
 ### Metode principale:
 - `hashPassword(String password)`  
   Metodă statică ce criptează parola folosind algoritmul SHA-256 și returnează un șir hexazecimal. Se folosește atât la crearea contului, cât și la autentificare sau schimbarea parolei.
@@ -34,13 +22,6 @@ Funcția `hashPassword` este esențială pentru securizarea parolei, prevenind s
 
 # Customer.java
 
-## Scurtă descriere
-Această clasă Java extinde funcționalitățile clasei `Person`, adăugând atribute și metode specifice pentru gestionarea contului bancar al unui client. Oferă posibilitatea de a vizualiza detalii despre cont, soldul și de a aproba tranzacții bancare.
-
-### Atribute:
-- `IBAN`: codul internațional al contului bancar
-- `balance`: soldul curent al clientului
-
 ### Metode principale:
 - `getIBAN()`  
   Returnează IBAN-ul clientului.
@@ -53,7 +34,50 @@ Această clasă Java extinde funcționalitățile clasei `Person`, adăugând at
 
 - `approveTransactions(double amount)`
   Simulează aprobarea unei tranzacții. Dacă fondurile sunt suficiente, utilizatorul este întrebat (prin consolă) dacă dorește să aprobe sau să refuze tranzacția. În funcție de răspuns, soldul este actualizat sau tranzacția este anulată.
+  
+# Admin.java
+  
+# AI Assistant
 
-## Observații
-- Clasa `Customer` moștenește toate metodele și atributele de la `Person`, inclusiv mecanismul de autentificare și criptare a parolei (`hashPassword()`).
-- Interacțiunea cu utilizatorul pentru aprobarea tranzacțiilor se realizează prin `Scanner` din consola Java.
+### Metode principale:
+- `createUser(String name, String personalIdentificationNumber, LocalDate birthDate, String username, String password, String phoneNumber, String email)`  
+  Creează un nou utilizator (`Person`) cu detaliile furnizate și afișează un mesaj de confirmare.
+
+- `deleteUser(Person user)`  
+  Șterge un utilizator specificat și afișează un mesaj de confirmare.
+
+- `modifyUser(Person user, String newUsername, String newPhoneNumber, String newEmail)`  
+  Permite modificarea informațiilor unui utilizator, inclusiv username, număr de telefon și email.
+
+- `performMaintenance()`  
+  Efectuează o mentenanță de sistem și afișează un mesaj corespunzător.
+
+- `checkLargeTransaction(double amount)`  
+  Verifică dacă o tranzacție depășește pragul de 10.000 de lei și o marchează pentru revizuire dacă este cazul.
+
+- `overseeAIResponses()`  
+  Supraveghează răspunsurile generate de asistentul AI pentru a verifica acuratețea acestora.
+
+- `updateAITrainingData()`  
+  Actualizează datele de antrenament pentru asistentul AI cu ultimele reglementări și modelele de detectare a fraudelor.
+
+
+### Metode principale:
+- `analyzeInquiry(String inquiry)`  
+  Analizează întrebarea clientului și redirecționează către metode specializate (deschidere cont, solicitare card, informații despre credite). Dacă întrebarea nu este recunoscută, va marca mesajul pentru verificare.
+
+- `handleAccountOpening()`  
+  Gestionează procesul de colectare a datelor pentru deschiderea unui cont bancar (nume și tipul de cont).
+
+- `handleCardInquiry()`  
+  Gestionează cererile pentru emiterea unui card nou sau pentru suport în legătură cu un card existent.
+
+- `requiresVerification()`  
+  Returnează `true` dacă ultima întrebare necesită verificare manuală.
+
+- `learnFromCorrection(String correctedResponse)`  
+  Permite corectarea răspunsului de către un operator uman și resetează flag-ul de verificare.
+
+- `getLastResponse()`  
+  Returnează ultimul răspuns generat de asistent.
+
