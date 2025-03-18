@@ -36,8 +36,6 @@ Funcția `hashPassword` este esențială pentru securizarea parolei, prevenind s
   Simulează aprobarea unei tranzacții. Dacă fondurile sunt suficiente, utilizatorul este întrebat (prin consolă) dacă dorește să aprobe sau să refuze tranzacția. În funcție de răspuns, soldul este actualizat sau tranzacția este anulată.
   
 # Admin.java
-  
-# AI Assistant
 
 ### Metode principale:
 - `createUser(String name, String personalIdentificationNumber, LocalDate birthDate, String username, String password, String phoneNumber, String email)`  
@@ -60,7 +58,8 @@ Funcția `hashPassword` este esențială pentru securizarea parolei, prevenind s
 
 - `updateAITrainingData()`  
   Actualizează datele de antrenament pentru asistentul AI cu ultimele reglementări și modelele de detectare a fraudelor.
-
+  
+# AI Assistant
 
 ### Metode principale:
 - `analyzeInquiry(String inquiry)`  
