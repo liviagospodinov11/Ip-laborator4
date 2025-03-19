@@ -3,7 +3,7 @@
 ## Studenți
 Apostol Alexandru (E2), Benchea Diana (E2), Blendea Delia (A5), Buliga Sarah (E2), Gospodinov Livia (A5), Mărtinaș Dragoș (E2), Trofin Dragoș (E2)
 
-# Person.java
+# Person.java (Blendea Delia, Gospodinov Livia)
 
 ### Metode principale:
 - `hashPassword(String password)`  
@@ -20,7 +20,7 @@ Apostol Alexandru (E2), Benchea Diana (E2), Blendea Delia (A5), Buliga Sarah (E2
 ## Observații
 Funcția `hashPassword` este esențială pentru securizarea parolei, prevenind stocarea acesteia în clar; algoritmul utilizat este SHA-256.
 
-# Customer.java
+# Customer.java (Blendea Delia, Gospodinov Livia)
 
 ### Metode principale:
 - `getIBAN()`  
@@ -35,7 +35,7 @@ Funcția `hashPassword` este esențială pentru securizarea parolei, prevenind s
 - `approveTransactions(double amount)`
   Simulează aprobarea unei tranzacții. Dacă fondurile sunt suficiente, utilizatorul este întrebat (prin consolă) dacă dorește să aprobe sau să refuze tranzacția. În funcție de răspuns, soldul este actualizat sau tranzacția este anulată.
   
-# Admin.java
+# Admin.java (Buliga Sarah, Mărtinaș Dragoș)
 
 ### Metode principale:
 - `createUser(String name, String personalIdentificationNumber, LocalDate birthDate, String username, String password, String phoneNumber, String email)`  
@@ -59,7 +59,7 @@ Funcția `hashPassword` este esențială pentru securizarea parolei, prevenind s
 - `updateAITrainingData()`  
   Actualizează datele de antrenament pentru asistentul AI cu ultimele reglementări și modelele de detectare a fraudelor.
   
-# AI Assistant
+# AIAssistant.java (Buliga Sarah, Mărtinaș Dragoș)
 
 ### Metode principale:
 - `analyzeInquiry(String inquiry)`  
@@ -80,3 +80,4 @@ Funcția `hashPassword` este esențială pentru securizarea parolei, prevenind s
 - `getLastResponse()`  
   Returnează ultimul răspuns generat de asistent.
 
+## C4 Model au fost realizate de Apostol Alexandru, Benchea Diana și Trofin Dragoș.
